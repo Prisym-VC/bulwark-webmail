@@ -9,6 +9,7 @@ export const NOTIFICATION_SOUNDS: { id: NotificationSoundChoice; file?: string }
   { id: 'involved', file: '/notification/involved-notification.mp3' },
   { id: 'swift', file: '/notification/notification-tone-swift-gesture.mp3' },
   { id: 'relax', file: '/notification/relax-message-tone.mp3' },
+  { id: 'z-punch', file: '/notification/dragon-ball-punch-ringtone.mp3' },
 ];
 
 function playBeep() {
