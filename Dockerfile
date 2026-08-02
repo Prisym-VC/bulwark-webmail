@@ -6,11 +6,11 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 # Optional: serve under a subpath like /webmail. Baked into emitted asset URLs
 # at build time, so it cannot be changed without rebuilding.
-ARG NEXT_PUBLIC_BASE_PATH=
+ARG NEXT_PUBLIC_BASE_PATH=/webmail
 ENV NEXT_PUBLIC_BASE_PATH=$NEXT_PUBLIC_BASE_PATH
 # Optional: avoid next-intl rewrite loops when served under a subpath.
 # Baked in at build time.
-ARG NEXT_PUBLIC_LOCALE_PREFIX=
+ARG NEXT_PUBLIC_LOCALE_PREFIX=always
 ENV NEXT_PUBLIC_LOCALE_PREFIX=$NEXT_PUBLIC_LOCALE_PREFIX
 # Optional: fallback UI locale (e.g. tr, de, fr) used when the visitor's
 # Accept-Language header does not match any supported locale. Baked in at
