@@ -1,7 +1,7 @@
 import { debug } from '@/lib/debug';
 import { withBasePath } from '@/lib/browser-navigation';
 
-export type NotificationSoundChoice = 'default' | 'cheerful' | 'involved' | 'swift' | 'relax';
+export type NotificationSoundChoice = 'default' | 'cheerful' | 'involved' | 'swift' | 'relax' | 'z-punch';
 
 export const NOTIFICATION_SOUNDS: { id: NotificationSoundChoice; file?: string }[] = [
   { id: 'default' },
