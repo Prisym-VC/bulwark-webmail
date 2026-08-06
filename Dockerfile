@@ -6,6 +6,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 # Optional: serve under a subpath like /webmail. Baked into emitted asset URLs
 # at build time, so it cannot be changed without rebuilding.
+#/webmail
 ARG NEXT_PUBLIC_BASE_PATH=/webmail
 ENV NEXT_PUBLIC_BASE_PATH=$NEXT_PUBLIC_BASE_PATH
 # Optional: avoid next-intl rewrite loops when served under a subpath.
@@ -15,20 +16,20 @@ ENV NEXT_PUBLIC_LOCALE_PREFIX=$NEXT_PUBLIC_LOCALE_PREFIX
 # Optional: fallback UI locale (e.g. tr, de, fr) used when the visitor's
 # Accept-Language header does not match any supported locale. Baked in at
 # build time because next-intl wires it into client-side routing too.
-ARG NEXT_PUBLIC_DEFAULT_LOCALE=
+ARG NEXT_PUBLIC_DEFAULT_LOCALE=en
 ENV NEXT_PUBLIC_DEFAULT_LOCALE=$NEXT_PUBLIC_DEFAULT_LOCALE
 # Commit SHA shown in the About screen. .dockerignore excludes .git, so
 # `git rev-parse` inside the build can't find it - CI must pass it in.
-ARG GIT_COMMIT=unknown
+ARG GIT_COMMIT=main-prisym
 ENV GIT_COMMIT=$GIT_COMMIT
 RUN npx next build --webpack
 
 FROM node:24-alpine AS runner
 
-LABEL org.opencontainers.image.title="Bulwark Webmail"
+LABEL org.opencontainers.image.title="Prisym Bulwark"
 LABEL org.opencontainers.image.description="Modern webmail client built with Next.js and the JMAP protocol"
-LABEL org.opencontainers.image.source="https://github.com/bulwarkmail/webmail"
-LABEL org.opencontainers.image.url="https://github.com/bulwarkmail/webmail"
+LABEL org.opencontainers.image.source="https://github.com/PrisymVC/bulwarkmail-webmail"
+LABEL org.opencontainers.image.url="https://github.com/Prisym-VC/bulwarkmail-webmail"
 LABEL org.opencontainers.image.licenses="AGPL-3.0-only"
 LABEL org.opencontainers.image.vendor="rbm.systems"
 
@@ -47,5 +48,5 @@ RUN mkdir -p /app/data/settings /app/data/admin /app/data/admin-state /app/data/
 USER nextjs
 EXPOSE 3000
 ENV PORT=3000
-ENV HOSTNAME="0.0.0.0"
+ENV HOSTNAME="::"
 CMD ["node", "server.js"]
