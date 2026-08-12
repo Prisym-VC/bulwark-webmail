@@ -177,8 +177,8 @@
     "protocol_open_mode_description": "Choose whether Bulwark opens mailto: and webcal: links in a new tab or reuses an open session. The active-session option needs notification permission so you can click a fallback notification to bring Bulwark to the front if the browser blocks focus.",
     "protocol_open_mode_active_session": "Open in active session if possible",
     "protocol_open_mode_new_tab": "Always open a new tab",
-    "focus_notification_title": "Open Bulwark",
-    "focus_notification_body": "The link was opened in Bulwark. Click to bring the window to the front.",
+    "focus_notification_title": "Open Email",
+    "focus_notification_body": "The link was opened in Prisym Email. Click to bring the window to the front.",
     "webcal_label": "Calendar links",
     "webcal_description": "Open webcal: links in Bulwark with a prefilled calendar subscription dialog.",
     "register_mailto": "Register email app",
@@ -629,6 +629,14 @@
     "minimize": "Minimize",
     "maximize": "Full screen",
     "restore": "Restore",
+    "read_receipt_on": "Read receipt requested (click to disable)",
+    "read_receipt_off": "Request a read receipt",
+    "dsn_on": "Delivery notification requested (click to disable)",
+    "dsn_off": "Request a delivery notification",
+    "format_plain_text": "Switch to plain text",
+    "format_rich_text": "Switch to rich text (HTML)",
+    "require_tls_on": "Encrypted delivery required (click to disable)",
+    "require_tls_off": "Require encrypted delivery (TLS)",
     "new_message": "New Message",
     "signature_edit_hint": "Double-click to edit the signature",
     "reply": "Reply",
@@ -699,6 +707,7 @@
       "email_placeholder": "alias@example.com",
       "envelope_notice": "If your server doesn't accept this address as the envelope sender, {identity} is used there instead, and recipients can see it in the Return-Path header."
     },
+    "use_template": "Template",
     "save_as_template": "Save as Template",
     "attach_from_device": "Upload from this device",
     "templates_menu": "Templates",
@@ -1268,7 +1277,8 @@
         "cheerful": "Cheerful",
         "involved": "Involved",
         "swift": "Swift Gesture",
-        "relax": "Relax"
+        "relax": "Relax",
+        "z-punch": "Z-Punch"
       },
       "push": {
         "title": "Background Notifications",
@@ -1322,7 +1332,7 @@
         "title": "Notification Sound",
         "description": "Choose which sound to play for notifications",
         "choose": "Sound",
-        "choose_desc": "Select a notification tone and click the speaker icon to preview it"
+        "choose_desc": "Select a notification tone and click the speaker icon to preview it. \n\nNote: Only affects desktop and in-app sound, mobile system settings may take priority."
       },
       "email": {
         "title": "Email Notifications",
@@ -1357,8 +1367,8 @@
       "date_format": {
         "label": "Date Format",
         "description": "How dates are shown in the email list",
-        "smart": "Smart",
-        "relative": "Relative",
+        "smart": "Smart (locale-aware)",
+        "relative": "Relative (1h ago, 2d ago)",
         "full": "Always full date",
         "preview_today": "Today:",
         "preview_this_week": "This week:",
@@ -1367,8 +1377,8 @@
       "date_locale": {
         "label": "Date format region",
         "description": "How numeric dates are ordered (day, month, year)",
-        "auto": "Automatic",
-        "iso": "ISO 8601",
+        "auto": "Automatic (match language)",
+        "iso": "ISO 8601 (YYYY-MM-DD)",
         "dmy": "Day/Month/Year",
         "mdy": "Month/Day/Year"
       },
@@ -1884,10 +1894,10 @@
       },
       "link_device": {
         "title": "Link Mobile App",
-        "description": "Sign in to the Bulwark Mail app on your phone without typing your password there. Your phone gets its own sign-in, so signing out here doesn't sign it out.",
+        "description": "Sign in to the Prisym Mail app on your phone without typing your password there. Your phone gets its own sign-in, so signing out here doesn't sign it out.",
         "generate": "Show QR code",
         "regenerate": "Show a new code",
-        "instructions": "Open the Bulwark Mail app and tap \"Scan a sign-in code\" on the sign-in screen (or \"Add account\" → \"Scan a sign-in code\" if you're already signed in), then point the camera here.",
+        "instructions": "Open the Prisym Mail app and tap \"Scan a sign-in code\" on the sign-in screen (or \"Add account\" → \"Scan a sign-in code\" if you're already signed in), then point the camera here.",
         "expires_in": "This code expires in {seconds} seconds. It can only be used once.",
         "expired": "This code has expired.",
         "error": "Couldn't create a pairing code. Please try again.",
@@ -1946,12 +1956,16 @@
         "inactive": "Inactive"
       },
       "date_range": {
+        "title": "Date Range",
+        "description": "Optionally limit the auto-reply to a specific period",
         "start": "Start Date",
         "start_description": "Leave empty for no start limit",
         "end": "End Date",
         "end_description": "Leave empty for no end limit"
       },
       "message": {
+        "title": "Auto-Reply Message",
+        "description": "The message that will be sent as a reply",
         "subject_label": "Subject",
         "subject_description": "Subject line of the auto-reply",
         "subject_placeholder": "Out of Office",
@@ -2116,7 +2130,7 @@
         "button": "Import"
       },
       "about": {
-        "title": "Bulwark Webmail",
+        "title": "Prisym Email",
         "source_code": "Source code"
       },
       "spam_siege": {
@@ -2426,6 +2440,12 @@
       "display": {
         "title": "Display",
         "description": "Configure how files and folders are displayed"
+      },
+      "folder_layout": {
+        "label": "Folder Navigation",
+        "description": "Choose how folders are displayed: inline with files or in a sidebar tree",
+        "inline": "Inline",
+        "sidebar": "Sidebar"
       },
       "default_view": {
         "label": "Default View",
@@ -3685,6 +3705,8 @@
     "title": "Files",
     "search_placeholder": "Search this folder",
     "empty_state_title": "No files yet",
+    "empty_state_description": "Upload files or create folders to get started",
+    "upload": "Upload",
     "upload_files": "Upload Files",
     "new_folder": "New Folder",
     "new_folder_name": "Folder name",
@@ -3703,7 +3725,11 @@
     "type": "Type",
     "folder": "Folder",
     "file": "File",
+    "parent_directory": "Parent directory",
+    "breadcrumb_root": "Home",
+    "other_accounts": "Other accounts",
     "no_accounts": "No connected accounts.",
+    "drop_files_here": "Drop files or folders here to upload",
     "uploading": "Uploading...",
     "upload_success": "{count, plural, one {1 file uploaded} other {# files uploaded}}",
     "upload_canceled": "Upload canceled",
@@ -3740,6 +3766,7 @@
     "file_name": "File name",
     "retry": "Retry",
     "refresh": "Refresh",
+    "toggle_favorite": "Toggle favorite",
     "duplicate": "Duplicate",
     "duplicate_success": "Duplicated successfully",
     "duplicate_error": "Failed to duplicate",
@@ -3751,6 +3778,8 @@
     "create_file_error": "Failed to create file",
     "favorites": "Starred",
     "recent": "Recent",
+    "properties": "Properties",
+    "open_folder": "Open folder",
     "show_in_folder": "Show in folder",
     "remove_from_recent": "Remove from recent",
     "upload_folder": "Upload Folder",
@@ -3762,10 +3791,33 @@
     "open_folder_tree": "Open folder tree",
     "file_list": "Files and folders",
     "context_menu": "Actions",
+    "settings_title": "File Settings",
+    "settings_display": "Display",
+    "settings_default_view": "Default View",
+    "settings_default_view_desc": "Choose between grid and list layout",
+    "settings_default_sort": "Default Sort",
+    "settings_default_sort_desc": "Choose the default sorting for files",
+    "settings_sort_direction": "Sort Direction",
+    "settings_sort_direction_desc": "Choose ascending or descending order",
     "settings_ascending": "Ascending",
     "settings_descending": "Descending",
+    "settings_icons": "Icons",
+    "settings_show_icons": "Show File Icons",
+    "settings_show_icons_desc": "Display icons next to files and folders",
+    "settings_colored_icons": "Colored Icons",
+    "settings_colored_icons_desc": "Use colorful icons instead of monochrome",
+    "settings_show_thumbnails": "Show Thumbnails",
+    "settings_show_thumbnails_desc": "Display image previews instead of icons for image files",
+    "settings_behavior": "Behavior",
+    "settings_show_hidden": "Show Hidden Files",
+    "settings_show_hidden_desc": "Display files and folders that start with a dot",
+    "settings_folder_layout": "Folder Navigation",
+    "settings_folder_layout_desc": "Choose how folders are displayed: inline with files or in a sidebar tree",
+    "settings_folder_layout_inline": "Inline",
+    "settings_folder_layout_sidebar": "Sidebar",
     "disabled_title": "Files feature is disabled by your administrator",
     "disabled_description": "Large file uploads via WebDAV can cause Stalwart/RocksDB instability, including out-of-memory crashes and unrecoverable disk usage. Deleted files may not be immediately purged from blob storage. This feature is not recommended for production environments.",
+    "stability_warning": "Large file uploads can cause server instability. Deleted files may not be immediately purged from storage. Use with caution.",
     "migration_title": "Updating your files…",
     "migration_description": "Organising folders and files into their proper structure. This happens only once.",
     "new": "New",
