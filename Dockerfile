@@ -19,7 +19,7 @@ ARG NEXT_PUBLIC_DEFAULT_LOCALE=en
 ENV NEXT_PUBLIC_DEFAULT_LOCALE=$NEXT_PUBLIC_DEFAULT_LOCALE
 # Commit SHA shown in the About screen. .dockerignore excludes .git, so
 # `git rev-parse` inside the build can't find it - CI must pass it in.
-ARG GIT_COMMIT=pris-staging
+ARG GIT_COMMIT=pris-main
 ENV GIT_COMMIT=$GIT_COMMIT
 RUN npx next build --webpack
 
