@@ -1,7 +1,7 @@
 {
   "meta_description": "Minimalist webmail client using JMAP protocol",
   "login": {
-    "title": "Webmail",
+    "title": "",
     "username_label": "Email",
     "username_placeholder": "user@example.com",
     "password_label": "Password",
@@ -155,8 +155,8 @@
     "protocol_open_mode_description": "Choose whether Bulwark opens mailto: and webcal: links in a new tab or reuses an open session. The active-session option needs notification permission so you can click a fallback notification to bring Bulwark to the front if the browser blocks focus.",
     "protocol_open_mode_active_session": "Open in active session if possible",
     "protocol_open_mode_new_tab": "Always open a new tab",
-    "focus_notification_title": "Open Bulwark",
-    "focus_notification_body": "The link was opened in Bulwark. Click to bring the window to the front.",
+    "focus_notification_title": "Open Email",
+    "focus_notification_body": "The link was opened in Prisym Email. Click to bring the window to the front.",
     "webcal_label": "Calendar links",
     "webcal_description": "Open webcal: links in Bulwark with a prefilled calendar subscription dialog.",
     "register_mailto": "Register email app",
@@ -303,7 +303,9 @@
     "move": "Move",
     "print": "Print",
     "view_source": "View source",
+
     "fullscreen": "Fullscreen",
+
     "exit_fullscreen": "Exit fullscreen",
     "export_email": "Export as .eml",
     "forward_as_attachment": "Forward as attachment",
@@ -1134,7 +1136,8 @@
         "cheerful": "Cheerful",
         "involved": "Involved",
         "swift": "Swift Gesture",
-        "relax": "Relax"
+        "relax": "Relax",
+        "z-punch": "Z-Punch"
       },
       "push": {
         "title": "Background Notifications",
@@ -1175,7 +1178,7 @@
         "title": "Notification Sound",
         "description": "Choose which sound to play for notifications",
         "choose": "Sound",
-        "choose_desc": "Select a notification tone and click the speaker icon to preview it"
+        "choose_desc": "Select a notification tone and click the speaker icon to preview it. \n\nNote: Only affects desktop and in-app sound, mobile system settings may take priority."
       },
       "email": {
         "title": "Email Notifications",
@@ -1672,7 +1675,7 @@
         "disable_tooltip": "Disable encryption",
         "enabled_success": "Encryption at rest enabled"
       },
-      "public_keys": {
+      "public_keys":{
         "name_label": "Public Key name",
         "name_placeholder": "e.g. My Key",
         "key_label": "Public Key (S/MIME or PGP ASCII-armored)",
@@ -1849,7 +1852,7 @@
       },
       "refresh_cache": {
         "label": "Refresh cached data",
-        "description": "Reload contacts, calendars, and folders from the server. Keeps your accounts and sessions — fixes a stale or wrong view without signing out.",
+        "description": "Reload contacts, calendars, and folders from the server. Keeps your accounts and sessions \u2014 fixes a stale or wrong view without signing out.",
         "button": "Refresh"
       },
       "reset_settings": {
@@ -1868,7 +1871,7 @@
         "button": "Import"
       },
       "about": {
-        "title": "Bulwark Webmail"
+        "title": "Prisym Webmail"
       }
     },
     "sidebar_apps": {
