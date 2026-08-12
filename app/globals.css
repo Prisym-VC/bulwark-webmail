@@ -6,23 +6,24 @@
 :root {
   font-size: var(--font-size-base);
 
-  --color-border: #e2e8f0;
-  --color-input: #e2e8f0;
-  --color-ring: #94a3b8;
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
-  --color-primary: #3b82f6;
-  --color-primary-foreground: #ffffff;
-  --color-secondary: #f8fafc;
-  --color-secondary-foreground: #0f172a;
-  --color-muted: #f1f5f9;
-  --color-muted-foreground: #64748b;
-  --color-accent: #dbeafe;
-  --color-accent-foreground: #1e40af;
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #ffffff;
-  --color-popover: #ffffff;
-  --color-popover-foreground: #0f172a;
+  --color-border: #460354;
+  --color-input: #d6d6d6;
+  --color-ring: #a45cec;
+  --color-background: #eddff4f5;
+  --color-foreground: #25012f;
+  --color-primary: #a45cec;
+  --color-primary-foreground: #18041e;
+  --color-secondary: #afa9b0; /* #0e00127d; alt-lighter #100613c4; alt-darker*/
+  --color-secondary-foreground: #352c3b;
+  --color-muted: #3a1c4b2b;
+  --color-muted-foreground: #3e045b;
+  --color-accent: #b15cec45;
+  --color-accent-foreground: #7803b3;
+  --color-destructive: #ff5555;
+  --color-destructive-foreground: #f8f8f2;
+  --color-popover: #f8f8f2;
+  --color-popover-foreground: #282a36;
+
 
   /* Sidebar */
   --color-sidebar: #f8fafc;
@@ -71,23 +72,23 @@
 }
 
 .dark {
-  --color-border: rgba(128, 128, 128, 0.3);
-  --color-input: #262626;
-  --color-ring: #d4d4d4;
-  --color-background: #0a0a0a;
-  --color-foreground: #fafafa;
-  --color-primary: #fafafa;
-  --color-primary-foreground: #171717;
-  --color-secondary: #262626;
-  --color-secondary-foreground: #fafafa;
-  --color-muted: #262626;
-  --color-muted-foreground: #a3a3a3;
-  --color-accent: #1e3a8a;
-  --color-accent-foreground: #dbeafe;
-  --color-destructive: #ef4444;
-  --color-destructive-foreground: #fafafa;
-  --color-popover: #1c1c1c;
-  --color-popover-foreground: #fafafa;
+  --color-border: #460354;
+  --color-input: #44475a;
+  --color-ring: #a45cec;
+  --color-background: #060306; /*#1b0923eb  alt */
+  --color-foreground: #f8f8f2;
+  --color-primary: #a45cec;
+  --color-primary-foreground: #271a2f;
+  --color-secondary: #100613;
+  --color-secondary-foreground: #ebe0f7;
+  --color-muted: #4a2b51;
+  --color-muted-foreground: #835baa;
+  --color-accent: #b15cec63;
+  --color-accent-foreground: #bd93f9;
+  --color-destructive: #e35959;
+  --color-destructive-foreground: #f8f8f2;
+  --color-popover: #44475a;
+  --color-popover-foreground: #f8f8f2;
 
   /* Sidebar */
   --color-sidebar: #0a0a0a;
@@ -120,7 +121,7 @@
   --color-chart-2: #4ade80;
   --color-chart-3: #fbbf24;
   --color-chart-4: #f87171;
-  --color-chart-5: #a78bfa;
+  --color-chart-5: #b16de9;
 }
 
 @theme inline {
@@ -217,9 +218,9 @@ body {
    sender info / attachments / plain-text body don't end up with light text
    on a white background. */
 .email-content-light {
-  --color-background: #ffffff;
+  --color-background: #dadada;
   --color-foreground: #0f172a;
-  --color-muted: #f1f5f9;
+  --color-muted: #bebebe;
   --color-muted-foreground: #64748b;
   --color-border: #e2e8f0;
   --color-card: #ffffff;
