@@ -1,7 +1,7 @@
 {
   "meta_description": "Minimalist webmail client using JMAP protocol",
   "login": {
-    "title": "Webmail",
+    "title": "",
     "username_label": "Email",
     "username_placeholder": "user@example.com",
     "password_label": "Password",
@@ -155,8 +155,8 @@
     "protocol_open_mode_description": "Choose whether Bulwark opens mailto: and webcal: links in a new tab or reuses an open session. The active-session option needs notification permission so you can click a fallback notification to bring Bulwark to the front if the browser blocks focus.",
     "protocol_open_mode_active_session": "Open in active session if possible",
     "protocol_open_mode_new_tab": "Always open a new tab",
-    "focus_notification_title": "Open Bulwark",
-    "focus_notification_body": "The link was opened in Bulwark. Click to bring the window to the front.",
+    "focus_notification_title": "Open Email",
+    "focus_notification_body": "The link was opened in Prisym Email. Click to bring the window to the front.",
     "webcal_label": "Calendar links",
     "webcal_description": "Open webcal: links in Bulwark with a prefilled calendar subscription dialog.",
     "register_mailto": "Register email app",
@@ -308,7 +308,9 @@
     "move": "Move",
     "print": "Print",
     "view_source": "View source",
+
     "fullscreen": "Fullscreen",
+
     "exit_fullscreen": "Exit fullscreen",
     "view_in_dark_mode": "View in dark mode",
     "view_in_light_mode": "View in light mode",
@@ -650,7 +652,7 @@
     "from_override": {
       "toggle_off": "Override",
       "toggle_on": "Cancel override",
-      "toggle_tooltip": "Edit the From name and address freely. Mail is still sent through your identity.",
+      "toggle_tooltip": "Edit the From name and address freely. Mail is still sent through your identity - only the visible From header changes.",
       "name_label": "From name",
       "name_placeholder": "Name",
       "email_label": "From email address",
@@ -1069,7 +1071,7 @@
       },
       "unified_mailbox": {
         "label": "Unified Mailbox",
-        "description": "Show combined folders (Inbox, Sent, etc.) for the active account and its shared folders. Needs more than one connected account (or a group inbox included below) before any folders appear here - with just one account, this only adds the section header. The All mail / Unread / Starred entries below are separate, admin-gated options that won't show up until your admin turns them on.",
+        "description": "Show combined folders (Inbox, Sent, etc.) for the active account and its shared folders.",
         "cross_account": {
           "label": "Across all accounts",
           "description": "Merge the unified mailbox across every connected account instead of staying within the active account."
@@ -1098,8 +1100,8 @@
         "description": "Show the total message count next to folders and tags, alongside the unread count. Disable to show only unread counts."
       },
       "favicon_unread_badge": {
-        "label": "Unread Count on Tab and App Icon",
-        "description": "Show the inbox unread count as a badge on the browser tab icon, and on the installed app icon where supported, so new mail is visible when the tab is not focused. Disable to keep both icons unbadged."
+        "label": "Unread Count on Tab Icon",
+        "description": "Show the inbox unread count as a badge on the browser tab icon, so new mail is visible when the tab is not focused. Disable to keep the icon unbadged."
       },
       "pro_interface": {
         "label": "Pro Interface (Experimental)",
@@ -1172,7 +1174,8 @@
         "cheerful": "Cheerful",
         "involved": "Involved",
         "swift": "Swift Gesture",
-        "relax": "Relax"
+        "relax": "Relax",
+        "z-punch": "Z-Punch"
       },
       "push": {
         "title": "Background Notifications",
@@ -1214,7 +1217,7 @@
         "title": "Notification Sound",
         "description": "Choose which sound to play for notifications",
         "choose": "Sound",
-        "choose_desc": "Select a notification tone and click the speaker icon to preview it"
+        "choose_desc": "Select a notification tone and click the speaker icon to preview it. \n\nNote: Only affects desktop and in-app sound, mobile system settings may take priority."
       },
       "email": {
         "title": "Email Notifications",
@@ -1723,7 +1726,7 @@
         "disable_tooltip": "Disable encryption",
         "enabled_success": "Encryption at rest enabled"
       },
-      "public_keys": {
+      "public_keys":{
         "name_label": "Public Key name",
         "name_placeholder": "e.g. My Key",
         "key_label": "Public Key (S/MIME or PGP ASCII-armored)",
@@ -1740,10 +1743,10 @@
       },
       "link_device": {
         "title": "Link Mobile App",
-        "description": "Sign in to the Bulwark Mail app on your phone without typing your password there. Your phone gets its own sign-in, so signing out here doesn't sign it out.",
+        "description": "Sign in to the Bulwark Mail mobile app without typing anything. Generate a QR code here and scan it from the app's login screen.",
         "generate": "Show QR code",
         "regenerate": "Show a new code",
-        "instructions": "Open the Bulwark Mail app and tap \"Scan a sign-in code\" on the sign-in screen (or \"Add account\" → \"Scan a sign-in code\" if you're already signed in), then point the camera here.",
+        "instructions": "Open the Bulwark Mail app, tap \"Scan QR code\" on the login screen, and point your camera here.",
         "expires_in": "This code expires in {seconds} seconds. It can only be used once.",
         "expired": "This code has expired.",
         "error": "Couldn't create a pairing code. Please try again.",
@@ -1926,7 +1929,7 @@
       },
       "refresh_cache": {
         "label": "Refresh cached data",
-        "description": "Reload contacts, calendars, and folders from the server. Keeps your accounts and sessions — fixes a stale or wrong view without signing out.",
+        "description": "Reload contacts, calendars, and folders from the server. Keeps your accounts and sessions \u2014 fixes a stale or wrong view without signing out.",
         "button": "Refresh"
       },
       "reset_settings": {
@@ -1945,7 +1948,7 @@
         "button": "Import"
       },
       "about": {
-        "title": "Bulwark Webmail"
+        "title": "Prisym Webmail"
       }
     },
     "sidebar_apps": {
@@ -3021,7 +3024,7 @@
       "enable_tasks": "Enable tasks",
       "enable_tasks_desc": "Show a tasks view in the calendar for managing to-dos",
       "show_tasks_on_calendar": "Show tasks on calendar",
-      "show_tasks_on_calendar_desc": "Display tasks on the month, week and day calendar views",
+      "show_tasks_on_calendar_desc": "Display task chips on the day and week calendar views",
       "hover_preview": "Event hover preview",
       "hover_preview_desc": "Show a detail popover when hovering over calendar events",
       "hover_preview_instant": "Instant",
@@ -3121,7 +3124,7 @@
       "supported_formats": "Supports iCalendar (.ics) files",
       "url_description": "Enter the URL of an external iCalendar (.ics) feed to import events.",
       "url_placeholder": "https://example.com/calendar.ics",
-      "url_hint": "Supports iCalendar (.ics) URLs",
+      "url_hint": "Supports CalDAV and iCalendar (.ics) URLs",
       "fetch": "Fetch",
       "invalid_url": "Please enter a valid URL",
       "url_fetch_failed": "Failed to fetch calendar from URL",
