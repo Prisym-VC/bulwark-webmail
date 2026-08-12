@@ -6,7 +6,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 # Optional: serve under a subpath like /webmail. Baked into emitted asset URLs
 # at build time, so it cannot be changed without rebuilding.
-ARG NEXT_PUBLIC_BASE_PATH=/webmail
+ARG NEXT_PUBLIC_BASE_PATH=/devmail
 ENV NEXT_PUBLIC_BASE_PATH=$NEXT_PUBLIC_BASE_PATH
 # Optional: avoid next-intl rewrite loops when served under a subpath.
 # Baked in at build time.
@@ -19,7 +19,7 @@ ARG NEXT_PUBLIC_DEFAULT_LOCALE=en
 ENV NEXT_PUBLIC_DEFAULT_LOCALE=$NEXT_PUBLIC_DEFAULT_LOCALE
 # Commit SHA shown in the About screen. .dockerignore excludes .git, so
 # `git rev-parse` inside the build can't find it - CI must pass it in.
-ARG GIT_COMMIT=pris-staging
+ARG GIT_COMMIT=pris-dev
 ENV GIT_COMMIT=$GIT_COMMIT
 RUN npx next build --webpack
 
